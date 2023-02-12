@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maps in HTML</title>
+  </head>
+  <style>
+    span.heading {
+      margin-left: 8%;
+    }
+    span.para {
+      margin-left: 3%;
+      font-weight: bold;
+      font-size: 15pt;
+    }
+  </style>
+  <body>
+    <h1>
+      <span class="heading">Uttarakhand Map</span>
+    </h1>
+    <p>
+      <span class="para">
+        To know about the following districts, click on them.<br> </span>
+       <span class="para"> a. Dehradun b.
+        Haridwar c. Pauri Garhwal d. Nainital </span>
+      </span>
+    </p>
+    <img
+      src="Uttarakhand-MAP (1).jpg"
+      alt="Uttarakhand"
+      usemap="#uttarakhandmap"
+      width="500"
+      height="400"
+    />
+    <map name="uttarakhandmap">
+      <area
+        shape="rectangle"
+        coords="217,245,294,276"
+        alt="Garhwal"
+        href="https://en.wikipedia.org/wiki/Pauri_Garhwal_district"
+        target="_parent"
+      />
+      <area
+        shape="rectangle"
+        coords="64,136,124,135"
+        alt="Dehradun"
+        href="https://en.wikipedia.org/wiki/Dehradun"
+      />
+      <area
+        shape="rectangle"
+        coords="96,257,159,259"
+        alt="Haridwar"
+        href="https://en.wikipedia.org/wiki/Haridwar"
+      />
+
+      <area
+        shape="rectangle"
+        coords="150,70,250,89"
+        alt="Uttarkashi"
+        href="https://en.wikipedia.org/wiki/Uttarkashi"
+      />
+    </map>
+  </body>
+</html>
