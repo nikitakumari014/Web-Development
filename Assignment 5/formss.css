@@ -1,0 +1,21 @@
+h1{
+    color: red;
+    text-align: center  ;
+}
+label{
+    color: red;
+    margin-left: 10%;
+    font-weight: bold;
+    font-size: x-large;
+}
+input{
+    margin-left: 2.5%;
+}
+.changeplace{
+    position: absolute;
+    margin-right: 30rem;
+}
+button{
+    margin-left: 20%;
+}
+#aed8e6

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      var numOne, numTwo, res, temp;
+      function fun1() {
+        numOne = parseInt(document.getElementById("one").value);
+        numTwo = parseInt(document.getElementById("two").value);
+        if (numOne && numTwo) {
+          temp = document.getElementById("res");
+          temp.style.display = "block";
+          res = numOne + numTwo;
+          document.getElementById("add").value = res;
+          res = numOne / numTwo;
+          document.getElementById("divide").value = res;
+        }
+      }
+      function fun2() {
+        numOne = parseInt(document.getElementById("one").value);
+        numTwo = parseInt(document.getElementById("two").value);
+        if (numOne && numTwo) {
+          temp = document.getElementById("res");
+          temp.style.display = "block";
+          res = numOne - numTwo;
+          document.getElementById("subtract").value = res;
+        }
+      }
+      function fun3() {
+        numOne = parseInt(document.getElementById("one").value);
+        numTwo = parseInt(document.getElementById("two").value);
+        if (numOne && numTwo) {
+          temp = document.getElementById("res");
+          temp.style.display = "block";
+          res = numOne * numTwo;
+          document.getElementById("multiply").value = res;
+        }
+      }
+      function fun4() {
+        numOne = parseInt(document.getElementById("one").value);
+        numTwo = parseInt(document.getElementById("two").value);
+        if (numOne && numTwo) {
+          temp = document.getElementById("res");
+          temp.style.display = "block";
+          res = numOne / numTwo;
+          document.getElementById("Divide").value = res;
+        }
+      }
+      function clr() {
+        document.getElementById("res").value = "";
+      }
+    </script>
+  </head>
+  <body>
+    <p id="input">
+      Enter First Number: <input id="one" /> <br /><br />
+      Enter Second Number: <input id="two" />
+    </p>
+    <p><button onclick="fun1()">Add</button></p>
+    <p><button onclick="fun2()">Subtract</button></p>
+    <p><button onclick="fun3()">Multiply</button></p>
+    <p><button onclick="fun4()">Divide</button></p>
+    <p><button onclick="clr()">Clear</button></p>
+    <p id="res" style="display: none">
+      Addition Result = <input id="add" /><br /><br />
+      Subtraction Result = <input id="subtract" /><br /><br />
+      Multiplication Result = <input id="multiply" /><br /><br />
+      Division Result = <input id="divide" />
+    </p>
+  </body>
+</html>

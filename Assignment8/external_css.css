@@ -1,0 +1,61 @@
+.div1{
+    width: 600px;
+    height: 120px;
+    border: 6px solid red;
+    box-sizing: border-box;
+    padding: 30px;
+    margin-left: 30%;
+    margin-top: 5%;
+    font-weight: bolder;
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    color: green;
+    background-color: yellow;
+}
+.div2{
+    width: 600px;
+    height: 30px;
+    border-style: dotted;
+    border-color: purple;
+    background-color: pink;
+    font-size: x-large;
+    color: blue;
+    margin-left: 30%;
+    margin-top: 2.5%;
+    font-family: 'Times New Roman', Times, serif;
+}
+.div3{
+    width: 600px;
+    height: 150px;
+    border: 5px solid blue;
+    border-style: dashed;
+    margin-left: 30%;
+    margin-top: 2.5%;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+    padding-left: 1%;
+    padding-top: 1%;
+    background-color: #d1fe9f;
+}
+.f1
+{
+    font-size: larger;
+    font-weight: bolder;
+}
+.navigation{
+    margin-left: 30%;
+    font-size: 20px;
+    font-family: 'Cambria','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: red;
+    margin-top: 2.5%;
+}
+.favs
+{
+    margin-left: 30%;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: red;
+    margin-top: 2.5%;
+}
