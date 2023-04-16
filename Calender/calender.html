@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calendar</title>
+</head>
+
+<body style="background-color: green;">
+    <h1>Calendar</h1>
+    <form>
+        <label for="year" style="font-size: 30px;">Enter Year:</label><br/>
+        <input type="number" id="year" name="year" min="1900" max="9999" required><br/>
+        <label for="month" style="font-size: 30px;">Enter Month:</label><br/>
+        <input type="number" id="month" name="month" min="1" max="12" required>
+        
+        <button type="submit">OK</button>
+    </form>
+    <br>
+    <table style="font-size: 30px;">
+        <thead>
+            <tr>
+                <th>Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+            </tr>
+        </thead>
+        <tbody id="calendar-body">
+        </tbody>
+    </table>
+    <script>
+        function generateCalendar() {
+            // Get user input for month and year
+            const monthInput = document.getElementById("month").value;
+            const yearInput = document.getElementById("year").value;
+
+            // Create a new date object with the user input
+            const date = new Date(yearInput, monthInput - 1, 1);
+
+            // Get the number of days in the month
+            const daysInMonth = new Date(yearInput, monthInput, 0).getDate();
+
+            // Get the index of the first day of the month (0 = Sunday, 1 = Monday, etc.)
+            const firstDayIndex = date.getDay();
+
+            // Get the table body element where we will generate the calendar
+            const tableBody = document.getElementById("calendar-body");
+            // Clear any existing table rows
+            tableBody.innerHTML = "";
+
+            // Generate table rows for each week in the month
+            let row = tableBody.insertRow();
+            let dayIndex = 0;
+
+            for (let i = 0; i < 6; i++) {
+                // Generate cells for each day of the week
+                for (let j = 0; j < 7; j++) {
+                    if (i === 0 && j < firstDayIndex) {
+                        // Leave cells before the first day of the month blank
+                        row.insertCell();
+                    } else if (dayIndex < daysInMonth) {
+                        // Generate a cell for the current day
+                        const cell = row.insertCell();
+                        cell.innerHTML = dayIndex + 1;
+                        dayIndex++;
+                    } else {
+                        // Leave remaining cells blank
+                        row.insertCell();
+                    }
+                }
+                row = tableBody.insertRow();
+            }
+        }
+
+        // Attach generateCalendar function to form submit event
+        document.querySelector('form').addEventListener('submit', (event) => {
+            event.preventDefault();
+            generateCalendar();
+        });
+    </script>
+</body>
+
+</html>
